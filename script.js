@@ -4,8 +4,6 @@ const cityName = document.getElementById('city-name')
 const weatherDesc = document.getElementById('weather-desc')
 const temp = document.getElementById('temp')
 
-const API_KEY = 'af5d462b9f26ca498f2f09ba18bc5173'
-
 
 //functions//
 function setTheme(condition, sunrise, sunset) {
@@ -149,7 +147,7 @@ function buildRain() {
 }
 
 async function getWeather(city) {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+  const url = `/weather?city=${city}`
 
   const response = await fetch(url)
   const data = await response.json()
@@ -173,7 +171,7 @@ async function getWeather(city) {
 }
 
 async function getForecast(city) {
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=metric`
+  const url = `/forecast?city=${city}`
 
   const response = await fetch(url)
   const data = await response.json()
