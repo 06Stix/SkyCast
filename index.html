@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <head>
-    <meta charsset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-sscale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skycast</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Outfit:wght@300;400;500;600&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="web-body">
 
-    <h1>Hello, Skycast</h1>
-    <p>My Weather app</p>
+    <div class="page">
+
+    <nav class="top-nav">
+      <div class="logo">Sky<span>cast</span></div>
+      <div class="search-bar">
+        <input id="city-input" type="text" placeholder="Search city..." autocomplete="off"/>
+        <button id="search-btn">Search</button>
+      </div>
+    </nav>
+    
+    <main class="hero">
+      <span id="weather-icon">⛅</span>
+      <h1 id="city-name">Skycast</h1>
+      <p id="weather-desc">Search a city to begin</p>
+      <div id="temp">--°C</div>
+      <p id="feels-like">--</p>
+      <p id="local-time">--</p>
+    </main>
+
+    <div class="weather-bg" id="weather-bg"></div>
+
+    <div id="forecast-container">
+      <p classs="forecast-title">5-Day Forecast</p>
+      <div id="forecast-cards"></div>
+
+    </div>
+
+ <footer class="page-footer">
+      Skycast · Live Weather
+    </footer>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
-
