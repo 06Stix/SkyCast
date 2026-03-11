@@ -1,9 +1,10 @@
 const express = require('express')
+const path = require('path')
 const app = express()
 
 const API_KEY = 'af5d462b9f26ca498f2f09ba18bc5173' 
 
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/weather', async function(req, res) {
   const city = req.query.city
