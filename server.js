@@ -3,7 +3,7 @@ const app = express()
 
 const API_KEY = 'af5d462b9f26ca498f2f09ba18bc5173' 
 
-app.use(express.static('.'))
+app.use(express.static('public'))
 
 app.get('/weather', async function(req, res) {
   const city = req.query.city

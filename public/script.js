@@ -36,7 +36,7 @@ function setTheme(condition, sunrise, sunset) {
     buildNight()
   } else {
     document.body.classList.add('sunny')
-    bg.innerHTML = ''
+    buildSunny()
   }
 }
   
